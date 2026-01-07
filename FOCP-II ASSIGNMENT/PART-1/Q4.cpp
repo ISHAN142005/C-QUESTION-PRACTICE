@@ -9,7 +9,7 @@ int main(){
 float a,b;
 cout<<"Enter the first number :";
 cin>>a;
-cout<<"Enter the first number :";
+cout<<"Enter the second number :";
 cin>>b;
 cout<<"The quotient of both the numbers is:"<<fixed<<setprecision(2)<<a/b<<endl;
 
