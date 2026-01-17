@@ -5,24 +5,28 @@ numbers divisible by both 3 and 7.
 */
 #include <iostream>
 using namespace std;
+
 int main()
 {
     cout << "Numbers-" << endl;
     int sum = 0;
 
-    for (int i = 1; i < 500; i++)
+    for (int i = 1; i <= 500; i++)
     {
-        if (i % 3 != 0 && i % 7 != 0 && sum < 1000)
+        if (i % 21 == 0)
         {
-            cout << i << " ";
-            sum = sum + i;
-        }
-        else if (i % 3 == 0 && i % 7 == 0 && sum < 1000)
-        {
-            i++;
             continue;
         }
+
+        if (sum + i > 1000)
+        {
+            break;
+        }
+
+        cout << i << " ";
+        sum += i;
     }
 
+    cout << "\nFinal Sum = " << sum << endl;
     return 0;
 }
